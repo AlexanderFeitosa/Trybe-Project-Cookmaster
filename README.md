@@ -16,8 +16,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 - [Entregáveis](#entregáveis)
   - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
   - [Desenvolvimento](#desenvolvimento)
-  - [Data de Entrega](#data-de-entrega)
-- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
+- [Instruções para conhecer o projeto](#instruções-para-conhecer-o-projeto)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
@@ -38,10 +37,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [8 - Crie um endpoint para a exclusão de uma receita](#8---crie-um-endpoint-para-a-exclusão-de-uma-receita)
     - [9 - Crie um endpoint para a adição de uma imagem a uma receita](#9---crie-um-endpoint-para-a-adição-de-uma-imagem-a-uma-receita)
     - [10 - Crie um endpoint para acessar a imagem de uma receita](#10---crie-um-endpoint-para-acessar-a-imagem-de-uma-receita)
-  - [Bônus](#bônus)
-    - [11 - Cadastramento de admin](#11---cadastramento-de-admin)
-- [Revisando um pull request](#revisando-um-pull-request)
-- [Avisos finais](#avisos-finais)
 
 ---
 
@@ -112,14 +107,8 @@ Deverá ser possível adicionar uma imagem à uma receita, utilizando o upload d
 
 ---
 
-## Data de Entrega
 
-    - Serão `3` dias de projeto.
-    - Data de entrega para avaliação final do projeto: `10/03/2021 - 14:00h`.
-
----
-
-# Instruções para entregar seu projeto
+# Instruções para conhecer o projeto
 
 ## Antes de começar a desenvolver
 
@@ -666,55 +655,4 @@ O resultado retornado deverá ser do tipo imagem, com um status http `200`:
 
 ![Foto Autenticada](./public/imagemrecetornada.png)
 
-
-## Bônus
-
-### 11 - Cadastramento de admin
-
-- A rota deve ser (`/users/admin`).
-
-- Só será possível adicionar um admin caso esta ação esteja sendo feita por outro admin, portanto, deve ser validado se há um admin logado.
-
-- Por padrão, as requisições pra esse endpoint devem adicionar um usuário com a role _admin_.
-
-- O corpo da requisição deve ter o seguinte formato:
-
-  ```json
-  {
-    "name": "string",
-    "email": "string",
-    "password": "string"
-  }
-  ```
-
-**Além disso, as seguintes verificações serão feitas:**
-
-- **[Será validado que não é possível cadastrar um usuário admin, sem estar autenticado como um usuário admin]**
-
-Se o usuário admin não é criado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `403`:
-
-![Criar usuário sem ser admin](./public/soadmincria.png)
-
-- **[Será validado que é possível cadastrar um usuário admin]**
-
-Se o usuário admin é criado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `201`:
-
-![Criar admin](./public/criaradmin.png)
-
 ---
-
-# Revisando um pull request
-
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-#VQV
-
----
-
-# Avisos finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
